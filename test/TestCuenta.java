@@ -1,4 +1,5 @@
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,7 +27,7 @@ public class TestCuenta {
 
     @Before
     public void setUp() {
-        cuenta = new Cuenta("0001.0002.12.1234567890", "Fulano de Tal");
+        cuenta = new Cuenta("0001.0002.12.1234567890", "Fulano de Tal", 0);
     }
 
     public void tearDown() {
@@ -36,7 +37,7 @@ public class TestCuenta {
     public void testRetirar() {
 
         cuenta.retirar(200);
-        assertEquals(cuenta.getSaldo, -200);
+        assertEquals(cuenta.getSaldo(), -200);
 
     }
 
@@ -44,7 +45,7 @@ public class TestCuenta {
     public void testIngresar() {
 
         cuenta.ingresar(200);
-        assertEquals(cuenta.getSaldo, 200);
+        assertEquals(cuenta.getSaldo(), 200);
 
     }
 
