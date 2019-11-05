@@ -36,16 +36,16 @@ public class TestCuenta {
     @Test
     public void testRetirar() {
 
-        cuenta.retirar(200);
-        assertEquals(cuenta.getSaldo(), -200);
+        cuenta.retirar(500);
+        assertEquals(cuenta.getSaldo(), -500);
 
     }
 
     @Test
     public void testIngresar() {
 
-        cuenta.ingresar(200);
-        assertEquals(cuenta.getSaldo(), 200);
+        cuenta.ingresar(500);
+        assertEquals(cuenta.getSaldo(), 500);
 
     }
 

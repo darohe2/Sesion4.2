@@ -40,13 +40,18 @@ public class Cuenta {
     
     public void ingresar(int x){
         
-        Saldo=200;
+       Saldo = Saldo+x;
         
         
     }
     public void retirar(int x){
         
-        Saldo=-200;
+        if (Saldo-x>=-500){
+            Saldo=Saldo-x;
+        }
+        else{
+            System.out.println("Error, pasa del límite");
+        }
         
     }
     
